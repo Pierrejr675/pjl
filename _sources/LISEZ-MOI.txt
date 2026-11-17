@@ -1,0 +1,26 @@
+_sources — matériel de travail (NE PAS mettre en ligne)
+=======================================================
+
+Ce dossier ne fait pas partie du site. Seuls index.html, favicon.ico et le
+dossier assets/ sont à publier.
+
+photos-facebook/   Les 63 photos publiques de la page Facebook de Pliage PJL,
+                   en pleine résolution (p01 = la plus récente, p64 = la plus
+                   ancienne). Le site en utilise 27, recadrées pour retirer les
+                   mentions « Avant / Après » incrustées.
+
+logos/             1.webp (logo foncé) et 2.webp (logo clair) tels que fournis,
+                   plus des versions 720 px à fond transparent.
+
+outils/            Scripts Python (Pillow + OpenCV) qui ont produit assets/img :
+                   - align.py          aligne chaque photo « avant » sur sa photo
+                                       « après » (pour les comparateurs glissants)
+                   - build_images.py   recadre, redresse et exporte en WebP
+                   - homographies.json résultat de align.py
+
+Pour régénérer les images après avoir changé un recadrage dans build_images.py :
+
+  python -I _sources/outils/build_images.py _sources/photos-facebook _sources/outils/homographies.json _sources/logos . _sources/apercu
+
+(à lancer depuis la racine du projet; « _sources/apercu » reçoit une planche de
+contrôle et peut être supprimé ensuite)

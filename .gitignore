@@ -1,0 +1,11 @@
+# Photos originales de la page Facebook : lourdes (16 Mo) et non utilisées
+# telles quelles par le site. Elles restent sur le disque, hors du dépôt.
+_sources/photos-facebook/
+
+# Planches de contrôle générées par _sources/outils/build_images.py
+_sources/apercu/
+
+# Fichiers système
+Thumbs.db
+desktop.ini
+.DS_Store
